@@ -1,0 +1,137 @@
+\documentclass[12pt,a4paper,margin=1in]{report}
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{4}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{fancyhdr}
+%\usepackage{newtxmath,newtxtext}
+%\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[super]{nth}
+\usepackage{float}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+
+\pagestyle{fancy} % Turn on the style
+\fancyhf{} % Start with clearing everything in the header and footer
+% Set the right side of the footer to be the page number
+\fancyfoot[R]{\thepage}
+\fancypagestyle{plain}{%
+    \renewcommand{\headrulewidth}{0pt}%
+    \fancyhf{}%
+    \fancyfoot[R]{\thepage}%
+}
+\renewcommand{\headrulewidth}{0pt}
+
+\begin{document}
+\renewcommand{\thepage}{ \roman{page}}
+\renewcommand{\baselinestretch}{1.5}
+\renewcommand{\headrulewidth}{0pt}
+\begin{center}
+\section*{PREFACE}
+\end{center}
+\par
+\fontsize{12pt}{12}\selectfont
+
+\newpage
+
+\addcontentsline{toc}{section}{PREFACE}
+
+\begin{center}
+\section*{ACKNOWLEDGEMENT}
+\end{center}
+\fontsize{12pt}{12}\selectfont
+
+
+
+\addcontentsline{toc}{section}{ACKNOWLEDGMENT}
+
+\tableofcontents
+\fancyfoot[R]{\thepage}
+%\addcontentsline{toc}{section}{ACKNOWLEDGEMENT}
+
+\begin{center}
+\listoffigures
+\end{center}
+
+\begin{center}
+\listoftables
+\end{center}
+\newpage
+
+\renewcommand{\thepage}{\arabic{page}}
+\setcounter{page}{1}% Start page number with 1
+\chapter{Introduction to the Training Establishment}
+
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=3in,keepaspectratio]{sutd.png}
+\caption{Official logo of Singapore University of Technology and Design}
+\label{fig3}
+\end{figure}
+
+\newpage
+
+\chapter{Training Experiences}
+
+\subsection{Git Version Control System}
+
+\begin{table}[H]
+\centering
+\caption{Basic Git commands used during training period\cite{git}}
+\begin{tabular}{|c|c|}
+\hline
+Command    & Explanation                                                                                                                                                                              \\ \hline
+git init   & \begin{tabular}[c]{@{}c@{}}Initializes a git repository, creates the \\ initial '.git' directory in a new or in an existing project.\end{tabular}                                        \\ \hline
+git clone  & Makes a Git repository copy from a remote source.                                                                                                                                        \\ \hline
+git add    & \begin{tabular}[c]{@{}c@{}}Adds files changes in the \\ working directory to the index.\end{tabular}                                                                                     \\ \hline
+git rm     & \begin{tabular}[c]{@{}c@{}}Removes files from the index and \\  working directory so they will not be tracked.\end{tabular}                                                              \\ \hline
+git commit & \begin{tabular}[c]{@{}c@{}}Takes all of the changes written in the index,\\  creates a new commit,object pointing \\ to it and sets the branch to point to that new commit.\end{tabular} \\ \hline
+git push   & \begin{tabular}[c]{@{}c@{}}Pushes all the modified local objects\\  to the remote repository and advances its branches.\end{tabular}                                                     \\ \hline
+git pull   & \begin{tabular}[c]{@{}c@{}}Fetches the files from the remote \\ repository and merges it with the local one.\end{tabular}                                                                \\ \hline
+\end{tabular}
+\label{git}
+\end{table}
+\chapter{Conclusion}
+
+\addcontentsline{toc}{chapter}{Annexes}
+\chapter*{Annexes}
+\renewcommand{\thepage}{\roman{page}}
+\setcounter{page}{9}% Start page number with 1
+\renewcommand\thefigure{4.\arabic{figure}}    
+\setcounter{figure}{0} 
+\addcontentsline{toc}{section}{Annex 1 : Figures}
+\section*{Annex 1 : Figures}
+
+\section*{Annex 2}
+\addcontentsline{toc}{section}{Annex 2}
+
+
+
+\section*{Annex 3}
+\addcontentsline{toc}{section}{Annex 3}
+
+\section*{Abbreviations}
+\addcontentsline{toc}{chapter}{Abbreviations}
+
+\begin{thebibliography}{9}
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibitem{sutd} 
+SUTD Official website : \\
+http://www.sutd.edu.sg/
+
+\end{thebibliography}
+\end{document}
+\end{document}
